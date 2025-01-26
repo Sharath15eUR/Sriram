@@ -1,0 +1,29 @@
+Q1)  Use the appropriate command to list all files larger than 1 MB in the current directory and save the output to a file.
+
+		ANS:
+
+		┌──(kali㉿kali)-[~/Downloads]
+		└─$ ls -lr
+		total 9904
+		-rw-r--r-- 1 root root  634704 Sep  2 13:19 zenmap_7.95-2_all.deb
+		-rw-rw-r-- 1 kali kali  709102 Sep  2 13:17 zenmap-7.95-1.noarch.rpm
+		drwxrwxr-x 5 kali kali    4096 Sep  2 13:16 usr
+		-rw-rw-r-- 1 kali kali  619344 Nov 22  2017 python-gtk2_2.24.0-5.1ubuntu2_amd64.deb
+		-rw-rw-r-- 1 kali kali  181516 Jan 12  2024 python-gobject-2_2.28.6-14ubuntu1_amd64.deb
+		-rw-rw-r-- 1 kali kali   57148 Feb 18  2020 python-cairo_1.16.2-2ubuntu2_amd64.deb
+		-rw-rw-r-- 1 kali kali 7920929 Sep  2 13:16 nmap-7.95-2.x86_64.rpm
+		drwxrwxr-x 7 kali kali    4096 Mar 28  2022 PcapXray-master
+																																																												   
+		┌──(kali㉿kali)-[~/Downloads]
+		└─$ ls -l | awk '$5 >1048576 {print $9}'                
+		nmap-7.95-2.x86_64.rpm
+																																																												   
+		┌──(kali㉿kali)-[~/Downloads]
+		└─$ ls -l | awk '$5 >1048576 {print $9}' > ~/Desktop/result.txt
+																																																												   
+		┌──(kali㉿kali)-[~/Downloads]
+		└─$ cat ~/Desktop/result.txt
+		nmap-7.95-2.x86_64.rpm
+																																																												   
+		┌──(kali㉿kali)-[~/Downloads]
+		└─$ 

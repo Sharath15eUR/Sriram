@@ -1,0 +1,24 @@
+Q2) Replace all occurrences of "localhost" with "127.0.0.1" in a configuration file named config.txt, and save the updated file as updated_config.txt
+
+ANS:
+                                                                                                                                                                                                                                          
+┌──(kali㉿kali)-[~/Desktop]
+└─$ cat config.txt
+server_name localhost;
+db_host localhost;
+api_endpoint http://localhost:8080/api;
+cache_host=localhost;
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop]
+└─$ sed 's/localhost/127.0.0.1/g' config.txt> ~/Desktop/updated_config.txt
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop]
+└─$ cat updated_config.txt
+server_name 127.0.0.1;
+db_host 127.0.0.1;
+api_endpoint http://127.0.0.1:8080/api;
+cache_host=127.0.0.1;
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop]
+└─$ 
