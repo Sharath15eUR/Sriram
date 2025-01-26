@@ -1,0 +1,4 @@
+total 0
+-rw-rw-r-- 1 kali kali 0 Jan 26 03:32 file1
+-rw-rw-r-- 1 kali kali 0 Jan 26 03:32 file2
+-rw-rw-r-- 1 kali kali 0 Jan 26 03:32 file3
