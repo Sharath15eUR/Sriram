@@ -38,7 +38,7 @@ Q1)  Use the appropriate command to list all files larger than 1 MB in the curre
 Q2) Replace all occurrences of "localhost" with "127.0.0.1" in a configuration file named config.txt, and save the updated file as updated_config.txt
 
 	ANS:
-	                                                                                                                                                                                                                                          
+	                                                                                                                                                                                                                               
 	┌──(kali㉿kali)-[~/Desktop]
 	└─$ cat config.txt
 	server_name localhost;
@@ -61,7 +61,6 @@ Q2) Replace all occurrences of "localhost" with "127.0.0.1" in a configuration f
 	└─$ 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
-
 
 Q3) Use the appropriate command to search for lines containing the word "ERROR" in a log file but exclude lines containing "DEBUG". Save the results to a file 
 named filtered_log.txt.
@@ -103,9 +102,6 @@ named filtered_log.txt.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
- 
 Q4)  4) Write a code to identify the process with the highest memory usage and then terminate it.
 	
 	ANS:
@@ -133,12 +129,9 @@ Q4)  4) Write a code to identify the process with the highest memory usage and t
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
 Q5)Use the networking tool command and print all the gateway available in a sorted manner
 
 	ANS:
-	
 	
 	┌──(kali㉿kali)-[~]
 	└─$ netstat -r                               
@@ -154,9 +147,5 @@ Q5)Use the networking tool command and print all the gateway available in a sort
 	                                                                                                                                                                                                                                           
 	┌──(kali㉿kali)-[~]
 	└─$ 
-
-
-
-
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
