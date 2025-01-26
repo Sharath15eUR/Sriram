@@ -1,5 +1,4 @@
 NAME : SRIRAM VIGNESH V
-COLLEGE :  THIAGARAJAR COLLEGE OF ENGINEERING
 MODULE 1 ASSESMENT
 ------------------------------------------------------------------------------------------------------------------
 Q1)  Create a file and add executable permission to all users (user, group and others)
