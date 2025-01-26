@@ -1,5 +1,6 @@
-NAME: SRIRAM VIGNESH V
-MODULE 2 COMPLETE ASSIGNMENT
+NAME : SRIRAM VIGNESH V
+MODULE 2 ASSESMENT
+------------------------------------------------------------------------------------------------------------------
 
 Q1)  Use the appropriate command to list all files larger than 1 MB in the current directory and save the output to a file.
 
