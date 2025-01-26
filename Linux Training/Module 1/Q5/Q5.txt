@@ -1,0 +1,32 @@
+
+Q5) Create 3 files in a dir1 and re-direct the output of list command with sorted by timestamp 
+of the files to a file           
+    
+    ANS:	
+																																														 
+	┌──(kali㉿kali)-[~/Desktop]
+	└─$ mkdir dir
+																																																												
+	┌──(kali㉿kali)-[~/Desktop]
+	└─$ cd dir     
+																																																												
+	┌──(kali㉿kali)-[~/Desktop/dir]
+	└─$ touch file1 file2 file3
+																																																												
+	┌──(kali㉿kali)-[~/Desktop/dir]
+	└─$ ls -lt > ~/Desktop/sorted.txt       
+																																																												
+	┌──(kali㉿kali)-[~/Desktop/dir]
+	└─$ cat ~/Desktop/sorted.txt
+	total 0
+	-rw-rw-r-- 1 kali kali 0 Jan 26 03:32 file1
+	-rw-rw-r-- 1 kali kali 0 Jan 26 03:32 file2
+	-rw-rw-r-- 1 kali kali 0 Jan 26 03:32 file3
+																																																												
+	┌──(kali㉿kali)-[~/Desktop/dir]
+	└─$ 
+
+
+
+
+

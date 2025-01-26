@@ -1,0 +1,35 @@
+
+
+Q3) Create a file and add a softlink to the file in different directory (Eg : Create a file in 
+dir1/dir2/file and create a softlink for file inside dir1)
+
+	ANS:
+
+																														
+	┌──(kali㉿kali)-[~]
+	└─$ cd Desktop
+																														
+	┌──(kali㉿kali)-[~/Desktop]
+	└─$ mkdir -p ~/Desktop/dir1/dir2
+																														
+	┌──(kali㉿kali)-[~/Desktop]
+	└─$ touch ~/Desktop/dir1/dir2/new.txt
+																														
+	┌──(kali㉿kali)-[~/Desktop]
+	└─$ echo "this is text file in dir2" > ~/Desktop/dir1/dir2/new.txt
+																														
+	┌──(kali㉿kali)-[~/Desktop]
+	└─$ ln -s ~/Desktop/dir1/dir2/new.txt ~/Desktop/dir1/link.txt
+																																																											
+	┌──(kali㉿kali)-[~/Desktop]
+	└─$ ls -l ~/Desktop/dir1
+	total 4
+	drwxrwxr-x 2 kali kali 4096 Jan 26 03:10 dir2
+	lrwxrwxrwx 1 kali kali   36 Jan 26 03:11 link.txt -> /home/kali/Desktop/dir1/dir2/new.txt
+																																																	  
+	┌──(kali㉿kali)-[~/Desktop]
+	└─$ cat ./dir1/link.txt
+	this is text file in dir2
+																														
+	┌──(kali㉿kali)-[~/Desktop]
+	└─$ 

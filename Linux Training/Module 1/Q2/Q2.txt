@@ -1,0 +1,30 @@
+
+Q2) create a file and remove write permission for group user alone
+
+	ANS:
+
+																																																											   
+	┌──(kali㉿kali)-[~/Desktop]
+	└─$ ls -l
+	total 0
+																																																											   
+	┌──(kali㉿kali)-[~/Desktop]
+	└─$ touch new.txt
+																																																											   
+	┌──(kali㉿kali)-[~/Desktop]
+	└─$ ls -l
+	total 0
+	-rw-rw-r-- 1 kali kali 0 Jan 26 02:38 new.txt
+																																																											   
+	┌──(kali㉿kali)-[~/Desktop]
+	└─$ chmod 464 new.txt
+																																																											   
+	┌──(kali㉿kali)-[~/Desktop]
+	└─$ ls -l
+	total 0
+	-r--rw-r-- 1 kali kali 0 Jan 26 02:38 new.txt
+																																																											   
+	┌──(kali㉿kali)-[~/Desktop]
+	└─$ 
+
+
