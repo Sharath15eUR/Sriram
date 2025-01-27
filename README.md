@@ -1,3 +1,3 @@
-Name : Sriram Vignesh V <br> 
-College : Thiagarajar engineering college (TCE) <br>
+Name : SRIRAM VIGNESH V <br> 
+College : Thiagarajar college of Engineering (TCE) <br>
 Github : https://github.com/SRIRAM-VIGNESH-V
