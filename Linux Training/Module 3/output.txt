@@ -1,0 +1,50 @@
+──(kali㉿kali)-[~/Desktop]
+└─$ ./backup_manager.sh ./source_directory ./backup_directory .txt
+ 
+Q1) to demonstrate that the script accepting 3 arguments
+
+this is the source directory -> ./source_directory
+this is the backup directory -> ./backup_directory
+this is the file extension of files to be backed up ->.txt
+
+Q2) to find the matched extension files with globbing
+ 
+files found :
+sample1.txt
+sample2.txt
+sample3.txt
+
+Q3) environment variables to track the number of files and total backup size
+ 
+env var -BACKUP_COUNT to keep track of no.of backed up files before backup = 0
+env var -size_files to keep track of size of backed up files before backup = 0
+ 
+Q4) Print the names of these files along with their sizes before performing the backup
+ 
+./source_directory/sample1.txt 607 bytes 
+./source_directory/sample2.txt 2859 bytes 
+./source_directory/sample3.txt 3541 bytes 
+
+Q5) i) if the backup directory does not exist, create it. If creation fails, exit with an error
+
+backup directory exists
+
+Q5) ii) if the source directory is empty or contains no files matching the extension, exit with a message.
+
+the source directory is non-empty and has 9 total files and 3 matching files
+
+Q5) iii)  If a file already exists in the backup directory with the same name, only overwrite it if it is older than the source file (compare timestamps). 
+
+starting backup ....
+
+backing up ./source_directory/sample1.txt to ./backup_directory/sample1.txt ....
+both time-stamps of sample2.txt are equal ... skipping backup
+both time-stamps of sample3.txt are equal ... skipping backup
+
+Q)6) OUTPUT REPORT
+
+REPORT: 
+      date :Wed Jan 29 10:04:14 PST 2025 
+      Total no.of files processed : 1 
+      Total size of files backed up : 607 bytes
+      Path to the backup directory: ./backup_directory
