@@ -10,4 +10,4 @@ file structure
                └── 4.tx
 ```
 
-All questions have been solved in file analyzer.sh and output is stored in output.txt and error log is stored in error.log file.
+All questions have been solved in file_analyzer.sh and output is stored in output.txt and error log is stored in error.log file.
