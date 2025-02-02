@@ -1,6 +1,6 @@
 file structure
 ```
-   dir<br>
+   dir
    ├── 1.txt
    └── dir_1
        ├── 2.txt
