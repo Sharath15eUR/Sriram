@@ -1,0 +1,77 @@
+                                                                                                                   
+┌──(kali㉿kali)-[~/Desktop]
+└─$ tree                                                          
+.
+├── 1.txt
+├── dir
+│   ├── 1.txt
+│   └── dir_1
+│       ├── 2.txt
+│       └── dir_2
+│           ├── 3.txt
+│           └── dir_3
+│               └── 4.txt
+├── errors.log
+└── file_analyzer.sh
+
+5 directories, 7 files
+                                                                                                                   
+┌──(kali㉿kali)-[~/Desktop]
+└─$ ~/Desktop/file_analyzer.sh -d ~/Desktop/dir/ -f 1.txt -k Lorem
+
+INPUTS:
+kEYWORD: "Lorem" is non empty and a valid keyword
+DIRECTORY: /home/kali/Desktop/dir/ exist
+FILE: 1.txt exist in /home/kali/Desktop/dir/1.txt
+
+ 
+FEEDBACK:
+shell script name: "/home/kali/Desktop/file_analyzer.sh"
+total number of arguments passed: -6
+arguments passed : "-d /home/kali/Desktop/dir/ -f 1.txt -k Lorem" 
+
+KEYWORD SEARCH IN GIVEN FILE
+searching for keyword: "Lorem" in file: (/home/kali/Desktop/dir/1.txt) with here string....
+no lines found with keywrod: Lorem in /home/kali/Desktop/dir/1.txt
+
+RECURSIVE KEYWORD SEARCH IN GIVEN DIRECTORY:
+searching for keyword: "Lorem" in file: (/home/kali/Desktop/dir//1.txt) with here string....
+no lines found with keywrod: Lorem in /home/kali/Desktop/dir//1.txt
+
+(DIR_1) directory found in (/home/kali/Desktop/dir/)
+
+searching for keyword: "Lorem" in file: (/home/kali/Desktop/dir//dir_1/2.txt) with here string....
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+
+(DIR_2) directory found in (/home/kali/Desktop/dir//dir_1)
+
+searching for keyword: "Lorem" in file: (/home/kali/Desktop/dir//dir_1/dir_2/3.txt) with here string....
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+(DIR_3) directory found in (/home/kali/Desktop/dir//dir_1/dir_2)
+
+searching for keyword: "Lorem" in file: (/home/kali/Desktop/dir//dir_1/dir_2/dir_3/4.txt) with here string....
+Lorem ipsum dolor sit amet, 
+
+                                                                                                                   
+┌──(kali㉿kali)-[~/Desktop]
+└─$ cat errors.log
+file 1.txt doesn't exist in path /home/kali/Desktop/1.txt
+no lines found with keywrod: Lorem in /home/kali/Desktop//dir/1.txt
+no lines found with keywrod: Lorem in /home/kali/Desktop//file_analyzer.sh
+directory  doesn't exist
+directory  doesn't exist
+directory  doesn't exist
+file 1.txt doesn't exist in path /home/kali/Desktop/dir1.txt
+directory /home/kali/Desktop/di/r doesn't exist
+file 1.txt doesn't exist in path /home/kali/Desktop/dir1.txt
+no lines found with keywrod: Lorem in /home/kali/Desktop/dir/1.txt
+no lines found with keywrod: Lorem in /home/kali/Desktop/dir//1.txt
+no lines found with keywrod: Lorem in /home/kali/Desktop/dir/1.txt
+no lines found with keywrod: Lorem in /home/kali/Desktop/dir//1.txt
+directory /home/kali/Desktop/dir1 doesn't exist
+no lines found with keywrod: Lorem in /home/kali/Desktop/dir/1.txt
+no lines found with keywrod: Lorem in /home/kali/Desktop/dir//1.txt
+                                                                                                                   
+┌──(kali㉿kali)-[~/Desktop]
+└─$ 
