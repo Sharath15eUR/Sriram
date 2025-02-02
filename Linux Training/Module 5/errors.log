@@ -1,0 +1,17 @@
+file 1.txt doesn't exist in path /home/kali/Desktop/1.txt
+no lines found with keywrod: Lorem in /home/kali/Desktop//dir/1.txt
+no lines found with keywrod: Lorem in /home/kali/Desktop//file_analyzer.sh
+directory  doesn't exist
+directory  doesn't exist
+directory  doesn't exist
+file 1.txt doesn't exist in path /home/kali/Desktop/dir1.txt
+directory /home/kali/Desktop/di/r doesn't exist
+file 1.txt doesn't exist in path /home/kali/Desktop/dir1.txt
+no lines found with keywrod: Lorem in /home/kali/Desktop/dir/1.txt
+no lines found with keywrod: Lorem in /home/kali/Desktop/dir//1.txt
+no lines found with keywrod: Lorem in /home/kali/Desktop/dir/1.txt
+no lines found with keywrod: Lorem in /home/kali/Desktop/dir//1.txt
+directory /home/kali/Desktop/dir1 doesn't exist
+no lines found with keywrod: Lorem in /home/kali/Desktop/dir/1.txt
+no lines found with keywrod: Lorem in /home/kali/Desktop/dir//1.txt
+                                                                       
