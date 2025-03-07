@@ -36,9 +36,9 @@ Establishing SSH Connectivity Between Ubuntu and Kali VMs and transfer files
 
 Overview:
 ---------
-This answer demonstrates the process of configuring secure SSH connectivity between two VirtualBox VMs running Ubuntu and Kali Linux.
-The steps include setting up and verifying the SSH service, troubleshooting network configurations, switching network modes
-for direct communication, and finally establishing an SSH session from Ubuntu to Kali.
+This answer demonstrates the process of configuring secure SSH connectivity between two VirtualBox VMs running
+Ubuntu and Kali Linux.The steps include setting up and verifying the SSH service, troubleshooting network
+configurations, switching network modesfor direct communication, and finally establishing an SSH session from Ubuntu to Kali.
 
 Step 1: SSH Service Setup on Kali:
 ----------------------------------
@@ -89,5 +89,6 @@ Troubleshooting & Notes:
 
 #Conclusion:
 -----------
-By following the steps above, secure SSH connectivity between the Ubuntu and Kali VMs was successfully established. This setup enables efficient remote management and file transfer between the two machines for further tasks or assignments.
+By following the steps above, secure SSH connectivity between the Ubuntu and Kali VMs was successfully established.
+ This setup enables efficient remote management and file transfer between the two machines for further tasks or assignments.
 ``
