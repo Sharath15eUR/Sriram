@@ -16,7 +16,7 @@ kali_ssh.txt -> terminal copy of kali VM
 Note_4:
 ------
 file structure located in kali vm to be copied to ubuntu VM via ssh  
-```
+
    dir
    ├── 1.txt
    └── dir_1
@@ -25,7 +25,7 @@ file structure located in kali vm to be copied to ubuntu VM via ssh
            ├── 3.txt
            └── dir_3
                └── 4.tx
-```
+
 
 Question:
 ---------
