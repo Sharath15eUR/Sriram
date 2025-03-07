@@ -1,9 +1,36 @@
-Note1:  Since I dont have access to a mainstream Linux machine , This answer demonstrates setting up SSH connection between two VMs running on a same Hypervisor using bridged adapter to maintain connectivity in the same private network managed by VBox <br><br>
+Note1: 
+------
 
-Note2:  This question is also shared with Question 11 where it is req to demonstrate both SSH and Telnet. Thus , ssh has been implemented here and telnet will be implemented later for that question respectively.
+Since I dont have access to a mainstream Linux machine , This answer demonstrates setting up SSH connection between two VMs (Ubuntu 16.04 and Kali 2024.3 ) running on a same Hypervisor using bridged adapter to maintain connectivity in the same private network managed by VBox
+
+Note2: 
+------
+This question is also shared with Question 11 where it is req to demonstrate both SSH and Telnet. Thus , ssh has been implemented here and telnet will be implemented later for that question respectively. 
+
+Note3:
+------
+readme.md -> explains the process of establishing ssh 
+ubuntu_ssh.txt -> terminal copy of ubuntu VM
+kali_ssh.txt -> terminal copy of kali VM
+
+Note4:
+------
+file structure located in kali vm to be copied to ubuntu VM via ssh 
+```
+   dir
+   ├── 1.txt
+   └── dir_1
+       ├── 2.txt
+       └── dir_2
+           ├── 3.txt
+           └── dir_3
+               └── 4.tx
+```
 
 
-Question: Establishing SSH Connectivity Between Ubuntu and Kali VMs and transfer files 
+Question:
+---------
+Establishing SSH Connectivity Between Ubuntu and Kali VMs and transfer files 
 
 Overview:
 ---------
@@ -62,18 +89,4 @@ By following the steps above, secure SSH connectivity between the Ubuntu and Kal
 
 
 
-considerred dir structure to transfer ( located in kali VM):
--------------------------------------------------------------
-in ~/home/Desktop
 
-file structure
-```
-   dir
-   ├── 1.txt
-   └── dir_1
-       ├── 2.txt
-       └── dir_2
-           ├── 3.txt
-           └── dir_3
-               └── 4.tx
-```
