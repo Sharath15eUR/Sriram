@@ -2,17 +2,17 @@
 ------
 Since I dont have access to a mainstream Linux machine , This answer demonstrates setting up SSH connection between two VMs (Ubuntu 16.04 and Kali 2024.3 ) running on a same Hypervisor using bridged adapter to maintain connectivity in the same private network managed by VBox
 
-# **Note_2:**
+**Note_2:**
 ------
 This question is also shared with Question 11 where it is req to demonstrate both SSH and Telnet. Thus , ssh has been implemented here and telnet will be implemented later for that question respectively. 
 
-# **Note_3:**
+**Note_3:**
 ------
 readme.md -> explains the process of establishing ssh  
 ubuntu_ssh.txt -> terminal copy of ubuntu VM  
 kali_ssh.txt -> terminal copy of kali VM  
 
-# **Note_4:**
+**Note_4:**
 ------
 file structure located in kali vm to be copied to ubuntu VM via ssh  
 ```
@@ -26,15 +26,15 @@ file structure located in kali vm to be copied to ubuntu VM via ssh
                └── 4.tx
 ```
 
-# **Question:**
+**Question:**
 ---------
 Establishing SSH Connectivity Between Ubuntu and Kali VMs and transfer files 
 
-# **Overview:**
+**Overview:**
 ---------
 This answer demonstrates the process of configuring secure SSH connectivity between two VirtualBox VMs running Ubuntu and Kali Linux. The steps include setting up and verifying the SSH service, troubleshooting network configurations, switching network modes for direct communication, and finally establishing an SSH session from Ubuntu to Kali.
 
-# **Step 1: SSH Service Setup on Kali**
+**Step 1: SSH Service Setup on Kali**
 ----------------------------------
 1. **Checked the SSH service status on Kali:**
    - Command: `sudo systemctl status ssh`
@@ -55,7 +55,7 @@ This answer demonstrates the process of configuring secure SSH connectivity betw
    - Command: `ssh kali@10.0.2.15`
    - Confirmed that the SSH session started successfully.
 
-# **Step 3: Configuring Network for Direct VM-to-VM Communication**
+**Step 3: Configuring Network for Direct VM-to-VM Communication**
 -------------------------------------------------------------
 1. **Reviewed VirtualBox network options:**
    - Options included NAT, NAT Network, Host-Only Adapter, and Bridged Adapter.
@@ -65,7 +65,7 @@ This answer demonstrates the process of configuring secure SSH connectivity betw
    - Command: `sudo dhclient -v`
    - Verified a new IP address in the expected network range (e.g., `192.168.x.x`).
 
-# **Step 4: Establishing SSH Connection from Ubuntu to Kali**
+**Step 4: Establishing SSH Connection from Ubuntu to Kali**
 --------------------------------------------------------
 1. **On Kali, re-verified its new IP address:**
    - Command: `hostname -I`
@@ -75,7 +75,7 @@ This answer demonstrates the process of configuring secure SSH connectivity betw
    - Replaced `<Kali_IP>` with the actual IP address (e.g., `ssh kali@192.168.1.101`)
 3. **Entered the Kali user password when prompted and confirmed a successful SSH session.**
 
-# **Troubleshooting & Notes:**
+**Troubleshooting & Notes:**
 ------------------------
 - If DHCP fails to assign a new IP in bridged mode, consider restarting the network interface or setting a static IP.
 - Port forwarding using NAT mode is an alternative but was not used since direct communication via Bridged Adapter is simpler.
