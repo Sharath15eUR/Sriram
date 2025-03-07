@@ -46,7 +46,7 @@ This answer demonstrates the process of configuring secure SSH connectivity betw
 3. **Verified the service was running:**
    - SSH service output confirmed it was active.
 
-# **Step 2: Verifying IP Address on Kali**
+**Step 2: Verifying IP Address on Kali**
 ------------------------------------
 1. **Obtained the IP address in NAT mode:**
    - Command: `hostname -I`
