@@ -1,5 +1,6 @@
-Note1: Since I dont have access to a mainstream Linux machine , This answer demonstrates setting up SSH connection between two VMs running on a same Hypervisor using bridged adapter to maintain connectivity in the same private network managed by VBox <br><br>
-Note2: This question is also shared with Question 11 where it is req to demonstrate both SSH and Telnet. Thus , ssh has been implemented here and telnet will be implemented later for that question respectively.
+Note1:  Since I dont have access to a mainstream Linux machine , This answer demonstrates setting up SSH connection between two VMs running on a same Hypervisor using bridged adapter to maintain connectivity in the same private network managed by VBox <br><br>
+
+Note2:  This question is also shared with Question 11 where it is req to demonstrate both SSH and Telnet. Thus , ssh has been implemented here and telnet will be implemented later for that question respectively.
 
 
 Question: Establishing SSH Connectivity Between Ubuntu and Kali VMs and transfer files 
