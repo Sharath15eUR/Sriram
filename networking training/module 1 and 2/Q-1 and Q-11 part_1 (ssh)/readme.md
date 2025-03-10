@@ -1,6 +1,9 @@
 ```
 Note_1:
 ------
+Kali(VM) -> SSH sever
+Ubuntu(VM) -> SSH client
+
 Since I dont have access to a mainstream Linux machine , This answer demonstrates setting up SSH connection
 between two VMs (Ubuntu 16.04 and Kali 2024.3 ) running on a same Hypervisor using bridged adapter to maintain
 connectivity in the same private network managed by OracleVBox.
