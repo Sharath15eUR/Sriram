@@ -2,8 +2,12 @@
 Note_1:
 ------
 
+readme.md -> explains the process of establishing ssh  
 Kali(VM) -> SSH sever
 Ubuntu(VM) -> SSH client
+ubuntu_ssh.txt -> terminal copy of ubuntu VM  
+kali_ssh.txt -> terminal copy of kali VM  
+
 
 Since I dont have access to a mainstream Linux machine , This answer demonstrates setting up SSH connection
 between two VMs (Ubuntu 16.04 and Kali 2024.3 ) running on a same Hypervisor using bridged adapter to maintain
@@ -15,12 +19,6 @@ This question is also shared with Question 11 where it is req to demonstrate bot
 ssh has been implemented here and telnet will be implemented later for that question respectively. 
 
 Note_3:
-------
-readme.md -> explains the process of establishing ssh  
-ubuntu_ssh.txt -> terminal copy of ubuntu VM  
-kali_ssh.txt -> terminal copy of kali VM  
-
-Note_4:
 ------
 file structure located in kali vm to be copied to ubuntu VM via ssh  
 
