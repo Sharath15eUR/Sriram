@@ -63,10 +63,6 @@ tcp.dstport == 22
 tcp.dstport == <port-number>
 Filters packets by the TCP destination port.
 Example:
-
-plaintext
-Copy
-Edit
 tcp.dstport == 22
 
 
