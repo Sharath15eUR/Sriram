@@ -1,4 +1,9 @@
 ```
+Questions:
+---------
+Q-1 -> demonstrate the usage of SCP with ssh
+Q-11 -> setting up SSH and telnet
+
 Note_1:
 ------
 
