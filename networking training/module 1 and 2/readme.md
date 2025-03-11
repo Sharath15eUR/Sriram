@@ -2,6 +2,14 @@
 Networking Training Program
 ---------------------------
 
+NOTE:
+----
+
+-> All questions have been answered with .md (markdown) format for easier representation
+-> readme.md in each sub folder is added to give additional information to the reviewer about the directory structure ,
+  attached files , question and approach.
+
+
 Module 1 and 2 assessment questions.
 ------------------------------------
 
@@ -18,12 +26,6 @@ Module 1 and 2 assessment questions.
 11) Using a terminal, connect to a remote machine via SSH and Telnet.
 
 
-NOTE:
-----
-
--> All questions have been answered with .md (markdown) format for easier representation
--> readme.md in each sub folder is added to give additional information to the reviewer about the directory structure ,
-  attached files , question and approach.
 
 
 ```
