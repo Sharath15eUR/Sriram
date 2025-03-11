@@ -1,0 +1,48 @@
+FTP CLIENT UBUNTU VM TERMINAL OUTPUT:
+------------------------------------
+
+vboxuser@ubuntu:~$ ftp 192.168.1.4
+
+Connected to 192.168.1.4.
+220 (vsFTPd 3.0.5)
+Name (192.168.1.4:vboxuser): kali
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+
+ftp> pwd
+257 "/home/kali" is the current directory
+
+ftp> cd Desktop
+250 Directory successfully changed.
+
+ftp> pwd
+257 "/home/kali/Desktop" is the current directory
+
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+drwxrwxr-x    3 1000     1000         4096 Mar 06 21:36 dir
+-rw-rw-r--    1 1000     1000            0 Mar 09 07:08 ftp.txt
+226 Directory send OK.
+
+ftp> get ftp.txt
+local: ftp.txt remote: ftp.txt
+200 PORT command successful. Consider using PASV.
+150 Opening BINARY mode data connection for ftp.txt (0 bytes).
+226 Transfer complete.
+
+ftp> put temp.txt
+local: temp.txt remote: temp.txt
+200 PORT command successful. Consider using PASV.
+150 Ok to send data.
+226 Transfer complete.
+
+ftp> exit
+221 Goodbye.
+
+vboxuser@ubuntu:~$  
+
+------------------------------------------------------------------------------------------------

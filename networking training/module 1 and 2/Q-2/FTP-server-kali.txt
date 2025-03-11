@@ -1,0 +1,30 @@
+TERMINAL OUTPUT OF KALI VM (FTP SERVER): 
+-----------------------------------------
+                                                                                                                   
+┌──(kali㉿kali)-[~/Desktop]
+└─$ sudo systemctl restart vsftpd
+sudo systemctl enable vsftpd
+
+Synchronizing state of vsftpd.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable vsftpd
+Created symlink /etc/systemd/system/multi-user.target.wants/vsftpd.service → /usr/lib/systemd/system/vsftpd.service.
+                                                                                                                   
+┌──(kali㉿kali)-[~/Desktop]
+└─$ sudo netstat -tnlp | grep vsftpd
+
+tcp6       0      0 :::21                   :::*                    LISTEN      96600/vsftpd        
+                                                                                                                   
+┌──(kali㉿kali)-[~/Desktop]
+└─$ hostname -I
+192.168.1.4 2401:4900:1ce2:1b88:681:2083:4e1e:1c1e 2401:4900:1ce2:1b88:a00:27ff:fed8:50e3 
+                                                                                                                   
+                                                                                                                   
+┌──(kali㉿kali)-[~/Desktop]
+└─$ sudo netstat -tnp | grep ftp
+
+tcp6       0      0 192.168.1.4:21          192.168.1.5:36048       ESTABLISHED 97546/vsftpd        
+                                                                                                                   
+┌──(kali㉿kali)-[~/Desktop]
+└─$ 
+
+-------------------------------------------------------------------------------------------------------
