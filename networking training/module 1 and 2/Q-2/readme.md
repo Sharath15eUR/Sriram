@@ -59,7 +59,7 @@ ls
 step 12: Upload a File to FTP Server
 put /home/kali/Desktop/example.txt
 
-tep 13: Download a File from FTP Server
+step 13: Download a File from FTP Server
 get example.txt
 
 Step 14: Exit FTP Session
