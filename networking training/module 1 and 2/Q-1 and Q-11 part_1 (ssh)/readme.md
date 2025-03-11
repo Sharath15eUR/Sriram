@@ -4,15 +4,17 @@ Questions:
 Q-1 -> demonstrate the usage of SCP with SSH
 Q-11 -> setting up SSH and telnet
 
-Note_1:
-------
+Directory structure:
+-------------------
 
 readme.md -> explains the process of establishing ssh  
 Kali(VM) -> SSH sever
 Ubuntu(VM) -> SSH client
 ubuntu_ssh.txt -> terminal copy of ubuntu VM  
-kali_ssh.txt -> terminal copy of kali VM  
+kali_ssh.txt -> terminal copy of kali VM
 
+Note_1:
+-------
 
 Since I dont have access to a mainstream Linux machine , This answer demonstrates setting up SSH connection
 between two VMs (Ubuntu 16.04 and Kali 2024.3 ) running on a same Hypervisor using bridged adapter to maintain
