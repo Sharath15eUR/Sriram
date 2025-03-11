@@ -1,4 +1,4 @@
-Kali VM terminal output ( telnet - server):
+KALI VM TERMINAL OUTPUT ( telnet - server):
 -------------------------------------------                                           
 
                                                                      
