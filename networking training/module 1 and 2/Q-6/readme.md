@@ -67,7 +67,7 @@ Comparison of Tools:
 | Platform Support       | Cross-platform      | Cross-platform      | Cross-platform      | Windows-only        |
 | Ease of Use            | Moderate            | Easy                | Easy                | Moderate            |
 | Speed                  | Moderate            | Fast                | Fast                | Fast                |
-| Security               | Password-based      | TLS 1.2             | AES 256-bit         | NLA      |
+| Security               | Password-based      | TLS 1.2             | AES 256-bit         | NLA                 |
 | Unattended Access      | Possible            | Yes                 | Yes                 | Yes                 |
 | Cost                   | Free/Paid versions  | Free/Paid versions  | Free/Paid versions  | Built into Windows  |
 
