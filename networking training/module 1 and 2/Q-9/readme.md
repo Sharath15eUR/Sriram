@@ -7,8 +7,8 @@ Log in to your home router's web interface (usually at 192.168.1.1 or 192.168.0.
 Ans:
 ---
 
-Ip address logged into -> http://192.168.1.1/
-Router vendor -> airtel
+Ip address logged into -> http://192.168.1.1/ 
+Router vendor -> airtel ( GPON gateway )
 number of connected device -> 2 (mobile and laptop) 
 
 ```
