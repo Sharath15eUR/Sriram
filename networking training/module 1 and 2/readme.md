@@ -6,7 +6,7 @@ NOTE:
 ----
 
 -> All questions have been answered with .md (markdown) format for easier representation
--> readme.md in each sub folder is added to give additional information to the reviewer about the directory structure ,
+-> readme.md in each sub folder is added to give additional information for the reviewer about the directory structure ,
   attached files , question and approach.
 
 
