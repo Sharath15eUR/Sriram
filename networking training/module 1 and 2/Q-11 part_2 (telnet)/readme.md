@@ -18,7 +18,6 @@ server to use SCP command the next part of the question i.e connecting via telne
 Directory structure:
 -------------------
 
-
 1) readme.md -> process of setting up telnet client (ubuntu 16.04 Vm) and  telnet server (kali VM)
 
 2) telnet-server-kali.txt -> terminl output of kali VM running telnet server
