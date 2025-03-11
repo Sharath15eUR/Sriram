@@ -7,12 +7,13 @@ Using terminal connect to a remote machine using telnet.
 
 Note-1:
 -----
-The same bridged adapter config for two VMs running in the same hypervisor setup explained in the Question - 1 for ssh is followed here.
+The same bridged adapter config for two VMs running in the same hypervisor setup
+explained in the Question - 1 for ssh is followed here.
 
 Note-2:
 -------
-connecting to a remote machine via ssh have been answered in Q-1 where we use ssh to connect to a remote server to use SCP command 
-the next part of the question i.e connecting via telnet is answered here
+connecting to a remote machine via ssh have been answered in Q-1 where we use ssh to connect to a remote
+server to use SCP command the next part of the question i.e connecting via telnet is answered here
 
 Directory structure:
 -------------------
