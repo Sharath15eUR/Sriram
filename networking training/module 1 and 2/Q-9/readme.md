@@ -13,9 +13,6 @@ number of connected device -> 2 (mobile and laptop)
 
 ```
 
-![image](https://github.com/user-attachments/assets/ba3bd14b-f270-48f0-8e5b-2817243cd1f2)
-
-![image](https://github.com/user-attachments/assets/a3ea9cc8-de06-4029-be31-10e016fc2458)
-
+![image](https://github.com/user-attachments/assets/0b278691-136e-437f-893b-e8714528ac99)
 
 
