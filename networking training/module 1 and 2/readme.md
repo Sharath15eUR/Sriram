@@ -14,7 +14,8 @@ Module 1 and 2 assessment questions.
 7) How to check if your default gateway is reachable or not and understand about the default gateway.
 8) Check iwconfig/ifconfig to understand in detail about network interfaces (Check about interface speed, MTU, and other parameters).
 9) Log in to your home router’s web interface (usually at 192.168.1.1 or 192.168.0.1) and check the connected devices list.
-10) Explain how a DHCP server assigns IP addresses to devices in your network.Using a terminal, connect to a remote machine via SSH and Telnet.
+10) Explain how a DHCP server assigns IP addresses to devices in your network.
+11) Using a terminal, connect to a remote machine via SSH and Telnet.
 
 
 NOTE:
