@@ -10,6 +10,10 @@ used software:
 ---------------
 Cisco packet tracer
 
+Attached simulation file:
+-----------------------
+Q-1.pkt
+
 Note:
 -----
 MAC table entries have MACs of connected switch interfaces due to the default support of
