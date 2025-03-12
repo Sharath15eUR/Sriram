@@ -15,7 +15,7 @@ Below is a screen shot of a TCP packet captured by the wireshark and its payload
 Analysis:
 -----------
 
-Ethernet II, <--- ethernet version
+Ethernet II, <--- ethernet type
     Src: 2a:6c:16:0b:9a:04 (2a:6c:16:0b:9a:04),
     Dst: TaicangT&WEl_b7:d2:90 (c8:9c:bb:b7:d2:90)
     Type: IPv6 (0x86dd)  <---- payload 
