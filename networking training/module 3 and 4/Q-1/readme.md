@@ -26,13 +26,17 @@ The topology chosen for this answer is given below
 ```
 ii) Use ping to generate traffic and observe the MAC address table of the switch. 
 
-Generated multiple PDU of ICMP packets from PC0 to PC1
+Generated multiple PDU of ICMP packets from PC0 to PC1 (only first ICMP capture of PC0 to PC1 is shown for simplicity)
 
 ```
 ![icmp captures](images/image-2.png) 
 
 ```
-ii) observe the MAC address table of the switches. 
+ii) observe the MAC address table of the switches.
+
+Note:
+----
+The below MAC table is captured after multiple ICMP pings and STP broadcasts
 
 ```
 ![MAC table captures](images/image.png) 
