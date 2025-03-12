@@ -20,7 +20,7 @@ i) Simulate a small network with swtches and multiple devices:
 
 The topology chosen for this answer is given below
 ```
-![alt text](images/image1.png)
+![alt text](images/image-1.png)
 
 ```
 ii) Use ping to generate traffic and observe the MAC address table of the switch. 
