@@ -12,7 +12,8 @@ Cisco packet tracer
 
 Note:
 -----
-MAC table entries have MACs of connected switch interfaces due to the default support of STP and DTP in switches in packet tracer.
+MAC table entries have MACs of connected switch interfaces due to the default support of
+STP and DTP in switches in packet tracer.
 
 Answer:
 -------
