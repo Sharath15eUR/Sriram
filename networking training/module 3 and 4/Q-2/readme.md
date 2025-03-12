@@ -2,7 +2,7 @@
 Question:
 ---------
 Capture and analyse the ethernet frames using wireshark. Inspect the structure with destination src address ,
- Ethertype and payload.
+Ethertype and payload.
 
 Ans:
 ----
