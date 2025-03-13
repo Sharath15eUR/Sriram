@@ -42,6 +42,6 @@ adding a static entry to the destination net and modifying the same on the other
 ![](images/image%20copy%203.png)
 
 ```
-thus it is trouble shooted and the network has been properly configured
+thus the network has been troubleshooted and the network has been properly configured
 
 ```
