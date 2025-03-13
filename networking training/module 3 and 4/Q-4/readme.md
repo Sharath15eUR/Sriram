@@ -34,7 +34,8 @@ and ping the neighbouring interfaces and check routing tables
 ![](images/image%20copy%202.png) 
 
 ```
-The routing table of router1 is found as above. It is found that no route the destination network available and thus adding a static entry to the destination net and modifying the same on the other side ...
+The routing table of router1 is found as above. It is found that no route the destination network available and thus
+adding a static entry to the destination net and modifying the same on the other side ...
 
 ```
 ![](images/image%20copy%204.png)
