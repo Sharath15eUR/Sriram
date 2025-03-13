@@ -1,6 +1,6 @@
 ```
-Q-4:
-----
+Q-4 & Q-7:
+---------
 Troubleshoot coneectivity with ping and traceroute.
 
 
