@@ -27,7 +27,8 @@ Troubleshooting;
 ![](images/image%20copy.png)
 
 ```
-since the default gateway is reachable and others are not lets go to router 1 and ping the neighbouring interfaces and check routing tables 
+since the default gateway is reachable and others are not lets go to router 1
+and ping the neighbouring interfaces and check routing tables 
 
 ```
 ![](images/image%20copy%202.png) 
