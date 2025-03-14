@@ -36,5 +36,7 @@ Class C Range: 192.0.0.0 to 223.255.255.255
 
 Additional Note:
 ------------------
-All three of these specific addresses (10.x.x.x, 172.16.x.x – 172.31.x.x, and 192.168.x.x) are in private IP ranges, commonly used in internal networks. However, the class and default mask designations above refer to the historical “classful” system. Modern networks typically use CIDR (Classless Inter-Domain Routing) to assign more flexible subnet masks.
+All three of these specific addresses (10.x.x.x, 172.16.x.x – 172.31.x.x, and 192.168.x.x) are in private IP ranges,
+commonly used in internal networks. However, the class and default mask designations above refer to the historical
+“classful” system. Modern networks typically use CIDR (Classless Inter-Domain Routing) to assign more flexible subnet masks.
 ```
