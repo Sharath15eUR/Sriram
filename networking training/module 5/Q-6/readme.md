@@ -12,7 +12,7 @@ classes of IP is given below...
 ![](images/image.png)
 
 ```
-Below is the classic “classful” breakdown of each address, along with the default subnet mask and the traditional IP address ranges for each class.
+Below is the classic classful breakdown of each address, along with the default subnet mask and the traditional IP address ranges for each class.
 
 1. 10.1.1.1
 -----------
