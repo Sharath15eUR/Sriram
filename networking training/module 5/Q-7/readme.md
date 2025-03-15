@@ -3,7 +3,8 @@ Question-7:
 ----------
 
 In Cisco Packet Tracer, create a small network with multiple devices (e.g., 2 PCs and a router). 
-Use private IP addresses (e.g., 192.168.1.x) on the PCs and configure the router to perform NAT to allow the PCs to access the internet. 
+Use private IP addresses (e.g., 192.168.1.x) on the PCs and configure the router to perform
+NAT to allow the PCs to access the internet. 
 
 software used: cisco packet tracer
 -------------
