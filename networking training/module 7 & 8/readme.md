@@ -29,7 +29,6 @@ The data for the PC should remain in a separate VLAN (VLAN 10). Configure the sw
 Q9. You configured VLANs 10 and 20 on your switch and assigned ports to each VLAN. However,
 devices in VLAN 10 cannot communicate with devices in VLAN 20. Troubleshoot the issue.
 
-
 Q10. Try Inter VLAN routing with Router
 
 Q11. Implement ACLs to restrict traffic based on source and destination ports.
