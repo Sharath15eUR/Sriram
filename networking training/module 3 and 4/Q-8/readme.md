@@ -1,7 +1,8 @@
 ```
 Question 8:
 ----------
-Research the Linux kernel's handling of Ethernet devices and network interfaces. Write a short report on how the Linux kernel supports Ethernet communication (referencing kernel.org documentation).
+Research the Linux kernel's handling of Ethernet devices and network interfaces.
+Write a short report on how the Linux kernel supports Ethernet communication (referencing kernel.org documentation).
 
 Answer:
 --------
@@ -9,7 +10,10 @@ Detailed Report on Linux Kernel’s Handling of Ethernet Devices and Network Int
 
 Introduction:
 -------------------
-The Linux kernel provides  flexible support for Ethernet communication through an extensive networking subsystem. This subsystem manages both physical andvirtual network interfaces, integrates specialized device drivers, and supplies user-space utilities for configuration and diagnostics. This report details the key components and methodologies by which the Linux kernel supports Ethernet communication, referencing documentation available on kernel.org.
+The Linux kernel provides  flexible support for Ethernet communication through an extensive networking subsystem.
+This subsystem manages both physical andvirtual network interfaces, integrates specialized device drivers, and supplies user-space utilities
+for configuration and diagnostics. This report details the key components and methodologies by which the Linux kernel supports Ethernet communication,
+referencing documentation available on kernel.org.
 
 Linux Kernel Networking Subsystem:
 ----------------------------------
@@ -19,12 +23,12 @@ At the heart of Ethernet support is the Linux kernel’s networking subsystem. I
 -> Managing all network-related operations such as packet transmission, reception, error handling, and routing.
 -> Representing each network interface with a dedicated data structure (typically the “net_device” structure).
 -> Providing a flexible framework that supports both physical hardware and virtual network interfaces.
-For an overview of the networking subsystem, see the documentation on kernel.org:https://docs.kernel.org/networking/index.html
 
 Network Interface Management:
 ----------------------------
 
-Each Ethernet interface in the Linux kernel is managed as an instance of the “net_device” structure. This management involves:
+Each Ethernet interface in the Linux kernel is managed as an instance of the “net_device” structure.
+This management involves:
 -> Initializing and configuring network devices when they are added to the system.
 -> Handling the flow of data by managing how packets are transmitted and received.
 -> Integrating with user-space applications and utilities for monitoring and control.
@@ -34,11 +38,11 @@ Ethernet Device Drivers:
 ------------------------
 
 The Linux kernel supports a wide array of Ethernet hardware through dedicated device drivers that:
--> Facilitate low-level communication between the operating system and Ethernet hardware by handling tasks such as initialization, interrupt processing, and data transfer.
+-> Facilitate low-level communication between the operating system and Ethernet hardware by handling tasks such as initialization, interrupt processing,
+  and data transfer.
 ->Use standard interfaces like “ethtool” to allow users and administrators to query and configure driver and hardware settings
  (e.g., speed, duplex mode, auto-negotiation, and flow control).
 
--> For more specifics on Ethernet drivers, refer to:https://www.kernel.org/doc/html/latest/networking/device_drivers/ethernet/intel/igb.html
 
 Virtual Network Devices:
 ------------------------
@@ -55,7 +59,6 @@ For environments that use Ethernet switches, the Linux kernel employs the switch
 
 -> Offload and optimize the packet forwarding process, reducing CPU load by handling forwarding in dedicated hardware.
 ->Provide a unified framework for managing switch-specific features such as VLANs and port configurations.
-This model supports high-performance networking and is detailed in the kernel documentation at:https://docs.kernel.org/networking/switchdev.html
 
 User-Space Utilities:
 ---------------------
