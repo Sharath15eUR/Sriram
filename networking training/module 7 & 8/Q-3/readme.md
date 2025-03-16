@@ -41,9 +41,12 @@ Understanding the Output:
 For each hop, traceroute/tracert typically displays:
 
 Hop Number: Indicates the sequential order of the routers along the route.
+
 IP Address/Hostname: Shows the responding router’s IP (and optionally its DNS-resolved hostname).
+
 Response Times: Displays the round-trip time (RTT) for each probe sent to that hop (commonly in milliseconds).
 There may be multiple RTT values per hop if multiple queries are sent.
+
 Timeouts/Errors: If a hop does not respond, you might see a “*” indicating a timeout or unreachable hop.
 
 Output Breakdown:
@@ -66,7 +69,8 @@ Timeouts: In hop 5 and partially in hop 7, the output shows * for some probes, i
 This could be due to a router configured to not send ICMP Time Exceeded messages or temporary network congestion.
 
 Interpreting Timeouts:
-A timeout (indicated by *) doesn’t necessarily mean the network is down—it can simply be that a particular router is configured to not respond to traceroute probes. The trace can still complete if subsequent hops reply.
+A timeout (indicated by *) doesn’t necessarily mean the network is down—it can simply be that a
+particular router is configured to not respond to traceroute probes. The trace can still complete if subsequent hops reply.
 
 Common Options for Traceroute/Tracert:
 --------------------------------------
