@@ -3,8 +3,10 @@
 Question:
 ---------
 
-Create an extended ACL to block specific applications, such as HTTP or FTP traffic.
+12 ) Create an extended ACL to block specific applications, such as HTTP or FTP traffic.
 Test the ACL rules by attempting to access blocked services.
+10) Implement ACLs to restrict traffic based on source and destination ports.
+Test rules by simulating legitimate and unauthorized traffic.
 
 Topology:
 ---------
