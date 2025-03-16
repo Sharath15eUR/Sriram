@@ -14,7 +14,7 @@ Use GNS3 or Packet Tracer to simulate network traffic.
 
 3)  Configure static IP addresses, modify MAC addresses, and verify network connectivity using ping and ifconfig commands.
 
-4) Troubleshoot Ethernet Communication with ping and traceroute using Cisco Packet Tracer:
+4) Troubleshoot Ethernet Communication with ping and traceroute using Cisco Packet Tracer
 
 5) Create a simple LAN setup with two Linux machines connected via a switch.
 
