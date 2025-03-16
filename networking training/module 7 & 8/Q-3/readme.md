@@ -42,7 +42,8 @@ For each hop, traceroute/tracert typically displays:
 
 Hop Number: Indicates the sequential order of the routers along the route.
 IP Address/Hostname: Shows the responding router’s IP (and optionally its DNS-resolved hostname).
-Response Times: Displays the round-trip time (RTT) for each probe sent to that hop (commonly in milliseconds). There may be multiple RTT values per hop if multiple queries are sent.
+Response Times: Displays the round-trip time (RTT) for each probe sent to that hop (commonly in milliseconds).
+There may be multiple RTT values per hop if multiple queries are sent.
 Timeouts/Errors: If a hop does not respond, you might see a “*” indicating a timeout or unreachable hop.
 
 Output Breakdown:
@@ -55,11 +56,14 @@ The route is traced using IPv6, as evident from the IPv6 addresses in each hop.
 Hop Details:
 Hop Number: Each line represents a sequential router (or hop) that the packet passes through. 
 
-Round-Trip Times (RTT): Three RTT values (in milliseconds) are shown per hop. These times indicate how long it took for each probe packet to travel to that hop and back.
+Round-Trip Times (RTT): Three RTT values (in milliseconds) are shown per hop.
+These times indicate how long it took for each probe packet to travel to that hop and back.
 
-IP Address/Hostname: The responding device’s address is shown. In hop 9, both the resolved hostname (maa05s21-in-x0e.1e100.net) and its IPv6 address are displayed.
+IP Address/Hostname: The responding device’s address is shown. In hop 9, both the resolved hostname
+(maa05s21-in-x0e.1e100.net) and its IPv6 address are displayed.
 
-Timeouts: In hop 5 and partially in hop 7, the output shows * for some probes, indicating that those requests timed out. This could be due to a router configured to not send ICMP Time Exceeded messages or temporary network congestion.
+Timeouts: In hop 5 and partially in hop 7, the output shows * for some probes, indicating that those requests timed out.
+This could be due to a router configured to not send ICMP Time Exceeded messages or temporary network congestion.
 
 Interpreting Timeouts:
 A timeout (indicated by *) doesn’t necessarily mean the network is down—it can simply be that a particular router is configured to not respond to traceroute probes. The trace can still complete if subsequent hops reply.
