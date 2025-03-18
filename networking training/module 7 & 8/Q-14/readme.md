@@ -3,13 +3,19 @@
 What is iperf?:
 ----------------
 
-Iperf is an open source network performance measurement tool that tests throughput in IP networks. To do so, it generates network traffic from one host, the iperf client, to another, the iperf server. Iperf not only measures the amount of traffic that is transferred, but also report performance metrics such as latency, packet loss, and jitter. This network performance management tool works for both TCP and UDP traffic with certain nuances that pertain to the specifics of each protocol. In UDP mode it can also generate multicast traffic.
+Iperf is an open source network performance measurement tool that tests throughput in IP networks.
+To do so, it generates network traffic from one host, the iperf client, to another, the iperf server.
+Iperf not only measures the amount of traffic that is transferred, but also report performance metrics such as latency,
+packet loss, and jitter. This network performance management tool works for both TCP and UDP traffic with certain
+nuances that pertain to the specifics of each protocol. In UDP mode it can also generate multicast traffic.
 
 
 Usage:
 ------
 
-In iperf, the host that sends the traffic is called client and the host that receives traffic is called server. Here is how the command line output looks for the two versions and for UDP and TCP tests, at their basic forms without any advanced options. Important to note is that in version 2, the default port where the server is listening is 5001 for both TCP and UDP protocols, while in version 3, the default port where the server is listening is 5201 for both protocols.
+In iperf, the host that sends the traffic is called client and the host that receives traffic is called server.
+Here is how the command line output looks for the two versions and for UDP and TCP tests, at their basic forms without any advanced options. Important to note is that in version 2, the default port where the server is listening is 5001 for both TCP and UDP protocols,
+while in version 3, the default port where the server is listening is 5201 for both protocols.
 
 
 To run the iperf server using the Transmission Control Protocol, use the flag -s (iperf -s):
