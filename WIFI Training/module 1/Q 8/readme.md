@@ -21,28 +21,35 @@ For instance, improvements in speed, efficiency, and security in successive revi
 
 Broad Scope Beyond Wireless Networking:
 ---------------------------------------
-While IEEE is well-known for its wireless networking standards, it also develops standards in fields such as electrical engineering, computer science, robotics, and telecommunications. Its influence spans far beyond Wi‑Fi, contributing to many areas of modern technology.
+While IEEE is well-known for its wireless networking standards, it also develops standards in fields such as electrical engineering,
+computer science, robotics, and telecommunications. Its influence spans far beyond Wi‑Fi, contributing to many areas of modern technology.
 
 Wi‑Fi Alliance (WFA):
 ---------------------
 
 Role as a Certification Body:
 -------------------------------
-The Wi‑Fi Alliance is an industry consortium that focuses exclusively on Wi‑Fi technology. Unlike IEEE, which creates the underlying technical standards, 
+The Wi‑Fi Alliance is an industry consortium that focuses exclusively on Wi‑Fi technology.
+Unlike IEEE, which creates the underlying technical standards, 
 the Wi‑Fi Alliance is responsible for testing and certifying that products adhere to those standards. 
-This certification ensures that devices from different manufacturers are interoperable, providing consumers with a seamless and reliable Wi‑Fi experience.
+This certification ensures that devices from different manufacturers are interoperable,
+providing consumers with a seamless and reliable Wi‑Fi experience.
 
 Interoperability and Branding:
 --------------------------------
 One of the key functions of the WFA is to promote interoperability among Wi‑Fi devices.
-By enforcing certification tests, the Wi‑Fi Alliance ensures that devices (such as routers, smartphones, and laptops) can communicate effectively.
-Additionally, the alliance licenses the “Wi‑Fi” trademark, which manufacturers use on products that have passed the certification process. 
+By enforcing certification tests, the Wi‑Fi Alliance ensures that devices
+(such as routers, smartphones, and laptops) can communicate effectively.
+Additionally, the alliance licenses the “Wi‑Fi” trademark,
+which manufacturers use on products that have passed the certification process. 
 This branding provides confidence to consumers that the product meets a certain level of performance and compatibility.
 
 Market Promotion and Ecosystem Development:
 ---------------------------------------------
 Beyond certification, the Wi‑Fi Alliance plays an important role in market education and the promotion of Wi‑Fi technology.
-It brings together a wide range of industry players—manufacturers, service providers, and technology vendors—to drive innovation, develop new features (such as Wi‑Fi Direct and Passpoint), and address emerging challenges like security and device connectivity.
+It brings together a wide range of industry players—manufacturers, service providers,
+and technology vendors—to drive innovation, develop new features (such as Wi‑Fi Direct and Passpoint),
+and address emerging challenges like security and device connectivity.
 ```
 
 ### Comparison of IEEE and Wi-Fi Alliance  
