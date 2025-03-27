@@ -64,6 +64,8 @@ It is often used in smart grid applications and home networking scenarios where 
 College Wi-Fi Backhaul:
 ----------------------  
 
-My college uses a wired backhaul for internet connectivity. This setup ensures a stable and high-speed connection, typically relying on fiber optic or Ethernet-based infrastructure. Wired backhaul provides low latency, high reliability, and consistent network performance, making it well-suited for academic environments where uninterrupted connectivity is crucial for research, online learning, and administrative operations.  
+My college uses a wired backhaul for internet connectivity. This setup ensures a stable and high-speed connection,
+typically relying on fiber optic or Ethernet-based infrastructure. Wired backhaul provides low latency, high reliability,
+and consistent network performance, making it well-suited for academic environments.
 
 ```
