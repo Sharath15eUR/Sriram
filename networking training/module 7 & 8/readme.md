@@ -7,7 +7,7 @@ www.google.com
 www.facebook.com
 www.amazon.com
 www.github.com
-www.cisco.com
+www.cisco.com.
 
 Q2. Use Wireshark to capture and analyze DNS, TCP, UDP traffic and packet header, packet flow, options and flags
 
