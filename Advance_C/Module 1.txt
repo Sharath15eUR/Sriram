@@ -1,0 +1,216 @@
+Q1) 
+
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_TASKS 3
+#define MAX_TASK_LENGTH 100
+#define DAYS_IN_WEEK 7
+
+
+
+typedef struct {
+    char dayName[10];
+    char tasks[MAX_TASKS][MAX_TASK_LENGTH];
+    int taskCount;
+} Day;
+
+
+
+void initializeWeek(Day week[]) {
+    char *names[DAYS_IN_WEEK] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+
+    for (int i = 0; i < DAYS_IN_WEEK; i++) {
+        strcpy(week[i].dayName, names[i]);
+        week[i].taskCount = 0;
+    }
+}
+
+
+
+int getDayIndex(char *dayName, Day week[]) {
+    for (int i = 0; i < DAYS_IN_WEEK; i++) {
+        if (strcasecmp(week[i].dayName, dayName) == 0)
+            return i;
+    }
+    return -1; // Not found
+}
+
+
+
+void inputTasks(Day week[]) {
+    char dayName[10];
+    printf("Enter the day name to add tasks (e.g., Monday): ");
+    scanf("%s", dayName);
+
+    int index = getDayIndex(dayName, week);
+    if (index == -1) {
+        printf("Invalid day name!\n");
+        return;
+    }
+
+    if (week[index].taskCount >= MAX_TASKS) {
+        printf("Maximum tasks already added for %s.\n", week[index].dayName);
+        return;
+    }
+
+    int remaining = MAX_TASKS - week[index].taskCount;
+    printf("You can add up to %d tasks.\n", remaining);
+
+    getchar(); 
+
+    for (int i = 0; i < remaining; i++) {
+        char temp[MAX_TASK_LENGTH];
+        printf("Enter task %d (or type 'done' to stop): ", i + 1);
+        fgets(temp, MAX_TASK_LENGTH, stdin);
+        temp[strcspn(temp, "\n")] = '\0'; // Remove newline character
+
+        if (strcasecmp(temp, "done") == 0)
+            break;
+
+        strcpy(week[index].tasks[week[index].taskCount], temp);
+        week[index].taskCount++;
+    }
+}
+
+
+
+void displayTasks(Day week[]) {
+    printf("\nWeekly Task List:\n");
+    for (int i = 0; i < DAYS_IN_WEEK; i++) {
+        printf("%s:\n", week[i].dayName);
+        if (week[i].taskCount == 0) {
+            printf("  No tasks.\n");
+        } else {
+            for (int j = 0; j < week[i].taskCount; j++) {
+                printf("  - %s\n", week[i].tasks[j]);
+            }
+        }
+    }
+}
+
+
+
+int main() {
+    Day week[DAYS_IN_WEEK];
+    initializeWeek(week);
+
+    int choice;
+    do {
+        printf("\nMenu:\n1. Add Tasks\n2. View Tasks\n3. Exit\nChoose an option: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                inputTasks(week);
+                break;
+            case 2:
+                displayTasks(week);
+                break;
+            case 3:
+                printf("Exiting program.\n");
+                break;
+            default:
+                printf("Invalid choice. Please enter 1, 2, or 3.\n");
+        }
+    } while (choice != 3);
+
+    return 0;
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q2) 
+#include <stdio.h>
+#include <stdlib.h>
+
+void rearrangeEvenOdd(int *arr, int size) {
+    int *temp = (int *)malloc(size * sizeof(int));
+    int *ptr = arr;
+    int *t = temp;
+
+
+    for (int i = 0; i < size; i++) {
+        if (*(ptr + i) % 2 == 0) {
+            *t = *(ptr + i);
+            t++;
+        }
+    }
+
+
+    for (int i = 0; i < size; i++) {
+        if (*(ptr + i) % 2 != 0) {
+            *t = *(ptr + i);
+            t++;
+        }
+    }
+
+  
+    for (int i = 0; i < size; i++) {
+        *(ptr + i) = *(temp + i);
+    }
+
+    free(temp);
+}
+
+
+
+int main() {
+    int arr[] = {1, 2, 4, 3, 5, 6};
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    rearrangeEvenOdd(arr, size);
+
+    for (int i = 0; i < size; i++)
+        printf("%d ", *(arr + i));
+
+    return 0;
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q3) 
+
+#include <stdio.h>
+
+int searchMatrix(int **mat, int n, int key) {
+    int row = 0, col = n - 1;
+
+    while (row < n && col >= 0) {
+        if (mat[row][col] == key)
+            return 1; // Found
+        else if (mat[row][col] > key)
+            col--;
+        else
+            row++;
+    }
+
+    return 0; // Not found
+}
+
+int main() {
+    int mat[4][4] = {
+        {1, 4, 7, 11},
+        {2, 5, 8, 12},
+        {3, 6, 9, 16},
+        {10, 13, 14, 17}
+    };
+    int key;
+    printf("\nEnter Key: ");
+    scanf("%d",&key);
+
+    // Convert to int** pointer
+    int *ptrs[4];
+    for (int i = 0; i < 4; i++)
+        ptrs[i] = mat[i];
+
+    if (searchMatrix(ptrs, 4, key))
+        printf("Found\n");
+    else
+        printf("Not found\n");
+
+    return 0;
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
