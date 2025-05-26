@@ -1,0 +1,259 @@
+3) 
+
+Explore :
+---------
+
+Child Process – fork()
+-----------------------
+fork() is a system call in Linux/Unix used to create a new child process. After invoking fork(), both the parent and the child processes execute independently:
+
+- The child process receives a return value of 0.
+- The parent process receives the Process ID (PID) of the child.
+
+This mechanism enables parallel execution of tasks across separate processes.
+
+
+Handling Common Signals
+------------------------
+Signals are asynchronous notifications sent to a process to invoke specific predefined behavior. Common signals include:
+
+- SIGINT  – Interrupt signal (e.g., Ctrl+C)
+- SIGTERM – Termination request
+- SIGSEGV – Segmentation fault (invalid memory access)
+
+Processes can handle signals using:
+
+- signal()     – Basic signal handling
+- sigaction()  – More robust and flexible signal handling
+
+These allow proper cleanup or custom responses to avoid abrupt termination.
+
+
+Exploring Kernel Crashes
+-------------------------
+Kernel crashes occur due to serious faults in the kernel space such as:
+
+- Null pointer dereferencing
+- Invalid memory access
+- Race conditions
+
+These faults often lead to a kernel panic, halting the system. Tools used to diagnose and trace kernel crashes include:
+
+- dmesg       – View kernel messages
+- Crash dumps – Post-mortem debugging information
+- Kernel logs – Logs from the operating system kernel
+
+
+Time Complexity
+----------------
+Time complexity describes how an algorithm’s execution time scales with input size. It is used to analyze and compare algorithm efficiency.
+
+Common notations include:
+
+- O(1)   – Constant time
+- O(n)   – Linear time
+- O(n²)  – Quadratic time
+
+Understanding time complexity is key to writing efficient and scalable programs.
+
+
+Locking Mechanism – Mutex vs Spinlock
+--------------------------------------
+Locking mechanisms help prevent race conditions in concurrent environments:
+
+- Mutex (Mutual Exclusion):
+  - Blocks the thread until the lock is available
+  - Suitable for longer critical sections
+  - Common in user space
+
+- Spinlock:
+  - Continuously checks (busy-waits) until the lock is available
+  - Ideal for short, quick operations
+  - Commonly used in kernel space or low-latency systems
+
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+1) 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <unistd.h>
+#include <time.h>
+
+int is_prime(int num) {
+    if (num < 2) return 0;
+    for (int i = 2; i * i <= num; i++)
+        if (num % i == 0)
+            return 0;
+    return 1;
+}
+
+// Thread A: Computes sum of first N primes
+void* threadA(void* arg) {
+    int N = *((int*)arg);
+    int count = 0, num = 2, sum = 0;
+
+    while (count < N) {
+        if (is_prime(num)) {
+            sum += num;
+            count++;
+        }
+        num++;
+    }
+
+    printf("[Thread A] Sum of first %d prime numbers is: %d\n", N, sum);
+    return NULL;
+}
+
+// Thread B: Prints every 2 seconds
+void* threadB(void* arg) {
+    time_t start = time(NULL);
+    while (difftime(time(NULL), start) <= 100) {
+        printf("[Thread 1] Thread 1 running\n");
+        sleep(2);
+    }
+    return NULL;
+}
+
+// Thread C: Prints every 3 seconds
+void* threadC(void* arg) {
+    time_t start = time(NULL);
+    while (difftime(time(NULL), start) <= 100) {
+        printf("[Thread 2] Thread 2 running\n");
+        sleep(3);
+    }
+    return NULL;
+}
+
+int main() {
+    int N;
+    printf("Enter N (number of primes to sum): ");
+    scanf("%d", &N);
+
+    pthread_t tA, tB, tC;
+
+    // Create threads
+    pthread_create(&tA, NULL, threadA, &N);
+    pthread_create(&tB, NULL, threadB, NULL);
+    pthread_create(&tC, NULL, threadC, NULL);
+
+    // Wait for all threads to complete
+    pthread_join(tA, NULL);
+    pthread_join(tB, NULL);
+    pthread_join(tC, NULL);
+
+    printf("All threads completed.\n");
+    return 0;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
+2) 
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <unistd.h>
+#include <signal.h>
+#include <time.h>
+
+// --- Signal Handler ---
+void sig_handler(int sig) {
+    printf("\n[Signal] Caught signal %d (e.g., Ctrl+C). Ignoring.\n", sig);
+}
+
+// --- Prime Checker ---
+int is_prime(int num) {
+    if (num < 2) return 0;
+    for (int i = 2; i * i <= num; i++)
+        if (num % i == 0) return 0;
+    return 1;
+}
+
+// --- Thread A: Sum of N primes ---
+void* threadA(void* arg) {
+    int N = *((int*)arg);
+    int count = 0, num = 2, sum = 0;
+
+    printf("[Thread A] Started: Calculating sum of first %d primes...\n", N);
+
+    while (count < N) {
+        if (is_prime(num)) {
+            sum += num;
+            count++;
+        }
+        num++;
+    }
+
+    printf("[Thread A] Finished: Sum = %d\n", sum);
+    return NULL;
+}
+
+// --- Thread B: Prints every 2 sec ---
+void* threadB(void* arg) {
+    printf("[Thread B] Started: Printing every 2 seconds\n");
+    time_t start = time(NULL);
+
+    while (difftime(time(NULL), start) <= 100) {
+        printf("[Thread B] Thread 1 running\n");
+        sleep(2);
+    }
+
+    printf("[Thread B] Finished\n");
+    return NULL;
+}
+
+// --- Thread C: Prints every 3 sec ---
+void* threadC(void* arg) {
+    printf("[Thread C] Started: Printing every 3 seconds\n");
+    time_t start = time(NULL);
+
+    while (difftime(time(NULL), start) <= 100) {
+        printf("[Thread C] Thread 2 running\n");
+        sleep(3);
+    }
+
+    printf("[Thread C] Finished\n");
+    return NULL;
+}
+
+// --- Main Program ---
+int main() {
+    // Register signal handler
+    struct sigaction sa;
+    sa.sa_handler = sig_handler;
+    sigemptyset(&sa.sa_mask);
+    sa.sa_flags = 0;
+    sigaction(SIGINT, &sa, NULL);  // Handle Ctrl+C
+    sigaction(SIGTERM, &sa, NULL); // Handle kill
+
+    int N;
+    printf("Enter N (number of primes to sum): ");
+    scanf("%d", &N);
+
+    pthread_t tA, tB, tC;
+    clock_t start_time = clock();
+
+    printf("[Main] Starting all threads...\n");
+
+    pthread_create(&tA, NULL, threadA, &N);
+    pthread_create(&tB, NULL, threadB, NULL);
+    pthread_create(&tC, NULL, threadC, NULL);
+
+    pthread_join(tA, NULL);
+    pthread_join(tB, NULL);
+    pthread_join(tC, NULL);
+
+    clock_t end_time = clock();
+    double total_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;
+
+    printf("[Main] All threads completed.\n");
+    printf("[Main] Total execution time: %.2f seconds\n", total_time);
+
+    return 0;
+}
+
+----------------------------------------------------------------------------------------------------------------------------
